@@ -1,4 +1,4 @@
-# 武汉大学毕业论文 LaTeX 模板
+# 武汉大学毕业论文 LaTeX 模板-test
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Last Commit](https://img.shields.io/github/last-commit/whutug/whu-thesis.svg)](https://github.com/whutug/whu-thesis/commits/)
