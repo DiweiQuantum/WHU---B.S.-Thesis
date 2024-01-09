@@ -726,7 +726,11 @@
     \hypersetup
       {
         pdftitle  = \g__whu_info_title_tl,
-        pdfauthor = \g__whu_info_author_tl
+        pdfauthor = \g__whu_info_author_tl,
+        colorlinks = true,
+        linkcolor = blue,
+        citecolor = blue,
+        urlcolor = blue
       }
 
     \tl_set_eq:NN \figureautorefname \figurename
