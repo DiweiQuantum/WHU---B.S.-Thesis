@@ -40,9 +40,9 @@
 
 % Chapter 1
 
-\chapter{金刚石中的氮-空位色心}
+\chapter{金刚石中的氮-空位色心（NV Center）}
 
-\section{金刚石}
+\section{金刚石材料}
 金刚石是碳元素的一种常见的同素异形体，在晶体结构上，每一个碳原子被周围的四个碳原子包围并与之形成共价键，从而形成四面体的面心立方结构的晶体。金刚石中的碳原子紧密结合在一起，这样特殊的晶体结构和原子之间稳定的键合方式使得金刚石拥有很多物理和化学上的优异性质，如高硬度、高热导率、高折射率、高抗压强度、高化学稳定性、高电阻率、低热膨胀系数、低摩擦系数、低表面粗糙度、低吸附性等。这些优异的性质使得金刚石在很多领域都有着广泛的应用，如磨料、切割工具、磨料涂层、磁头、光学窗口、高功率激光器件、高频电子器件、生物医学器件等。
 
 金刚石是最坚硬的天然形成的物质，其机械硬度高达 10000 \unit{\kilogram\per\milli\meter\squared}，德拜温度高达1860 \unit{\kelvin}，它的杨氏模量为1050 \unit{\GPa}，有着22 \unit{\watt\per\centi\meter\per\kelvin}的热导率、较低的热展宽系数、较高的击穿电场强度（> 10 \unit{\mega\volt\per\centi\meter})，以及较强的载流子迁移率（对于电子为4500 \unit{\centi\meter\squared\per\volt}，对于空穴为3800 \unit{\centi\meter\squared\per\volt}）。对于纯净的金刚石而言，其密度为$\rho =$ 3.52 \unit{\g\per\cm}，折射率$n =$ 2.39，同时有5.47 \unit{\electronvolt}的较宽带隙，这使其投射光谱范围非常广，从紫外波段（Ultraviolet, UV）到近红外波段（Near Infrared, IR）都可以覆盖到，外观高度透明纯净，拥有极高的透光率 \cite{mildren2013optical, lonvcar2013quantum}。
@@ -64,7 +64,7 @@ CVD方法是一种铜质外延的生长过程，需要在金刚石晶种基面�
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.9\textwidth]{figures/Chapter 1/Diamond Lattice.png}
-  \caption[金刚石及其晶胞结构]{金刚石及其晶胞结构}
+  \caption[金刚石及其晶胞结构]{金刚石及其晶胞结构\cite{staudacher2015nuclear}}
   \label{fig: Diamond Lattice}
 \end{figure}
 
@@ -73,76 +73,94 @@ CVD方法是一种铜质外延的生长过程，需要在金刚石晶种基面�
 \begin{figure}
   \centering
   \includegraphics[width=0.7\textwidth]{figures/Chapter 1/Color Center.jpg}
-  \caption[电子辐照的type \uppercase\expandafter{\romannumeral1}a型金刚石样品显微图片]{电子辐照的type \uppercase\expandafter{\romannumeral1}a型金刚石样品显微图片。浅色区域的空位和氮浓度较低，样品尺寸为\(1\times1\times0.5 \, \mathrm{mm^3}\)。}
+  \caption[电子辐照的type \uppercase\expandafter{\romannumeral1}a型金刚石样品显微图片]{电子辐照的type \uppercase\expandafter{\romannumeral1}a型金刚石样品显微图片。浅色区域的空位和氮浓度较低，样品尺寸为\(1\times1\times0.5 \, \mathrm{mm^3}\) \cite{kiflawi2007electron}。}
   \label{fig: Color Center}
 \end{figure}
 
-\subsection{金刚石色心}
+\subsection{金刚石中的色心}
 金刚石是一种宽禁带半导体，实验上测得其价带（valence band，VB）和导带（conduction band，CB）之间的带隙宽度大约为5.5 \unit{\eV} \cite{mildren2013optical,cheng2023bandgap,wort2008diamond}。尽管纯净的金刚石呈现无色透明的质地，可以透过的波长范围从UV到IR，但是由于晶格中存在的缺陷或者杂质，使得金刚石体系的带隙之中会出现额外的能级结构，其中的一些能级结构具有活跃的光学性质。因此，这些缺陷结构可以吸收可见光，并在缺陷浓度足够高的时候，使得金刚石材料呈现出特定的颜色，比如高浓度的硼元素会使金刚石呈现蓝色，镍元素相关的缺陷会让金刚石呈现棕色。目前人类已知金刚石中的涉及到光学跃迁性质的荧光缺陷有超过100种，这些缺陷都可以被称为色心\cite{koizumi2008physics,jelezko2006single}。许多的色心都和氮元素杂质有关，因为氮元素是金刚石中最常见的元素，高浓度的氮元素掺杂会使得金刚石呈现黄色的色泽\cite{breeding2020naturally, zaitsev2016spectroscopic}。
 
-金刚石色心种的缺陷能级和电子结构之间的光学跃迁过程可以被人为地进行激光调控，在这个过程中会有不同的激发机理，取决于色心相关的缺陷能级的性质，如图 \ref{fig: Optical Transition}所示。比如，激光的光子可以将缺陷能级的电子激发到导带之中（见图1.3a \uppercase\expandafter{\romannumeral1}所示），或者将电子从夹带激发到缺陷能级见图1.3a \uppercase\expandafter{\romannumeral2所示}。另一种常见的情况是在带隙中有多个缺陷能级的情况，激光可以将电子从一个缺陷能级激发到另一个缺陷能级（见图1.3b所示），这种跃迁的方式相较于电子在缺陷能级和导带（或价带）之间相互跃迁能为高效和可控\cite{gali2011time,gali2012excitation}。在各种各样的色心之中，氮-空位色心（Nitrogen-Vacancy Center）在近些年来被许多科学家所广泛研究，其在532 nm激光的激发下会发出红色的荧光，以此为特征对它的性质进行观测和表征\cite{doherty2013nitrogen}。
+金刚石色心种的缺陷能级和电子结构之间的光学跃迁过程可以被人为地进行激光调控，在这个过程中会有不同的激发机理，取决于色心相关的缺陷能级的性质，如图 \ref{fig: Optical Transition}所示。比如，激光的光子可以将缺陷能级的电子激发到导带之中（见图 \ref{fig: Optical Transition}a \uppercase\expandafter{\romannumeral1}所示），或者将电子从夹带激发到缺陷能级见图 \ref{fig: Optical Transition}a \uppercase\expandafter{\romannumeral2所示}。另一种常见的情况是在带隙中有多个缺陷能级的情况，激光可以将电子从一个缺陷能级激发到另一个缺陷能级（见图 \ref{fig: Optical Transition}b所示），这种跃迁的方式相较于电子在缺陷能级和导带（或价带）之间相互跃迁能为高效和可控\cite{gali2011time,gali2012excitation}。在各种各样的色心之中，氮-空位色心（Nitrogen-Vacancy Center）在近些年来被许多科学家所广泛研究，其在532 nm激光的激发下会发出红色的荧光，以此为特征对它的性质进行观测和表征\cite{doherty2013nitrogen}。
 
 \begin{figure}
   \centering
   \includegraphics[width=0.9\textwidth]{figures/Chapter 1/Optical Transition.png}
-  \caption[含有缺陷的金刚石晶体的电子能级结构]{含有缺陷的金刚石晶体的电子能级结构。（a）带隙之间的施主和受主能级会使电子发生在价带和缺陷能级（\uppercase\expandafter{\romannumeral1}）或缺陷能级和导带（\uppercase\expandafter{\romannumeral2}）之间的光学跃迁。（b）电子在施主和受主能级之间的光学跃迁。}
+  \caption[含有缺陷的金刚石晶体的电子能级结构]{含有缺陷的金刚石晶体的电子能级结构。（a）带隙之间的施主和受主能级会使电子发生在价带和缺陷能级（\uppercase\expandafter{\romannumeral1}）或缺陷能级和导带（\uppercase\expandafter{\romannumeral2}）之间的光学跃迁。（b）电子在施主和受主能级之间的光学跃迁\cite{staudacher2015nuclear}。}
   \label{fig: Optical Transition}
 \end{figure}
 
-\section{金刚石中氮-空位色心的结构和性质}
+\section{NV Center的结构和性质}
 
 由于本文主要是围绕金刚石中氮-空位色心的各种性质进行讨论，并结合实验对其进行表征，因此本节将对其结构和性质进行详细的介绍。氮-空位色心不仅仅存在于金刚石中，还可能存在于其他的半导体晶体如碳化硅（SiC）之中，而本文所有的讨论和实验都是基于金刚石中的氮-空位色心，出于方便起见，后文叙述中所有的“NV色心”和“NV Center”都是指金刚石中的氮-空位色心\cite{von2015identification, csore2017characterization}。
 
-\subsection{NV Center的结构}
-NV Center是金刚石中最常见的色心之一，其结构如图1.4所示，它是由一个氮原子替位原本的碳原子和邻近的一个空位缺陷组成的复合缺陷结构，其晶格结构中的空位缺陷是金刚石晶格中最常见的缺陷，而氮原子是金刚石中最常见的杂质之一，因此NV Center是金刚石中最常见的色心之一。我们定义NV Center的轴向为氮原子和空位中心的连线，也就是晶胞的[111]轴向。氮原子和围绕空位的三个碳原子形成了高度对称的$C_{3v}$对称性结构，这种结构使得NV Center的晶体结构具有很高的对称性（其结构对称性见图1.5），从而使得NVCenter的电子结构和光学性质具有很高的稳定性。
+\subsection{NV Center的晶体结构}
+NV Center是金刚石中最常见的色心之一，其结构如图 \ref{fig: NV Structure}所示，它是由一个氮原子替位原本的碳原子和邻近的一个空位缺陷组成的复合缺陷结构，其晶格结构中的空位缺陷是金刚石晶格中最常见的缺陷，而氮原子是金刚石中最常见的杂质之一，因此NV Center是金刚石中最常见的色心之一。我们定义NV Center的轴向为氮原子和空位中心的连线，也就是晶胞的[111]轴向。氮原子和围绕空位的三个碳原子形成了高度对称的$C_{3v}$对称性结构，这种结构使得NV Center的晶体结构具有很高的对称性（其结构对称性见图 \ref{fig: NV Symmetry}），从而使得NVCenter的电子结构和光学性质具有很高的稳定性。
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/Chapter 1/NV Structure.png}
+  \caption[金刚石中NV Center的结构]{金刚石中NV Center的结构，其中深蓝色的原子为氮原子，橙色的电子自旋标识符处为空位，围绕在NV Center周围的碳原子为深灰色\cite{staudacher2015nuclear}。}
+  \label{fig: NV Structure}
+\end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=1.0\textwidth]{figures/Chapter 1/NV Symmetry.png}
-  \caption[金刚石的C$_{3v}$对称性群结构]{金刚石的C$_{3v}$对称性群结构，氮原子和围绕空位（中心半透明标识）的三个碳原子沿着[111]轴旋转对称，同时也沿着每个碳原子分别和空位、氮原子组成的平面镜像对称。}
+  \caption[金刚石的C$_{3v}$对称性群结构]{金刚石的C$_{3v}$对称性群结构，氮原子和围绕空位（中心半透明标识）的三个碳原子沿着[111]轴旋转对称，同时也沿着每个碳原子分别和空位、氮原子组成的平面镜像对称\cite{doherty2013nitrogen}。}
   \label{fig: NV Symmetry}
 \end{figure}
 
-近十几年来，随着半导体的工艺进步和计算机的广泛运用，人们开发了许多强有力的科学计算工具，通过基于密度泛函理论（Density Functional Theory, DFT）第一性原理（First-principles），利用杂化泛函Heyd-Scuseria-Ernzerhof (HSE06)算法可以较为准确地得到NV Center的自旋密度（Spin Density）和带隙中各能级的电荷密度（Charge Density），如图1.6所示，可以看到NV$^-$的自旋密度和带隙中各个缺陷能级的电荷密度都是围绕$C_{3v}$旋转对称\cite{zou2023influence}。
+近十几年来，随着半导体的工艺进步和计算机的广泛运用，人们开发了许多强有力的科学计算工具，通过基于密度泛函理论（Density Functional Theory, DFT）第一性原理（First-principles），利用杂化泛函Heyd-Scuseria-Ernzerhof (HSE06)算法可以较为准确地得到NV Center的自旋密度（Spin Density）和带隙中各能级的电荷密度（Charge Density），如图 \ref{fig: Spin and Charge Density}所示，可以看到NV$^-$的自旋密度和带隙中各个缺陷能级的电荷密度都是围绕$C_{3v}$旋转对称\cite{zou2023influence}。
 
 \begin{figure}
   \centering
   \includegraphics[width=1.0\textwidth]{figures/Chapter 1/Spin and Charge Density.png}
-  \caption[基态NV$^-$的自旋密度和带隙中各个缺陷能级的电荷密度分布]{基态NV$^-$的自旋密度和带隙中各个缺陷能级的电荷密度分布，其中蓝色的原子为氮原子，棕色的原子为碳原子，视角沿$C_{3v}$轴的[-1 -1 -1]方向，粉红色的区域为自旋密度分布，淡黄色的区域为电荷密度分布，isovalue的设置为0.0078 \unit{e\per\bohr\cubed}}
+  \caption[基态NV$^-$的自旋密度和带隙中各个缺陷能级的电荷密度分布]{基态NV$^-$的自旋密度和带隙中各个缺陷能级的电荷密度分布，其中蓝色的原子为氮原子，棕色的原子为碳原子，视角沿$C_{3v}$轴的[-1 -1 -1]方向，粉红色的区域为自旋密度分布，淡黄色的区域为电荷密度分布，绘图参数isovalue的值设置为0.0078 \unit{e\per\bohr\cubed}\cite{zou2023influence}。}
   \label{fig: Spin and Charge Density}
 \end{figure}
 
 由于氮元素是元素周期表上第五主族的元素，所以其外围电子层中有五个价电子，其中三个电子和周围三个碳原子结合形成共价键，剩余两个电子和空位周围的三个碳原子上剩余的一个电子共五个电子形成了中性的NV CenterNV$^0$，因此五个电子形成的自旋系统有一个孤立的电子自旋，所以NV$^0$的电子自旋量子数$S=\frac{1}{2}$。在实验上已经发现的NV Center的两种稳定的电荷态，中性的NV$^0$和带负电的NV$^-$，其中NV$^-$的电子自旋量子数$S=1$ \cite{waldherr2011dark,aslam2013photo,dolde2014nanoscale}。NV Center的电荷态取决于其周围的环境状态，比如附近存在的杂质、缺陷、电场，或者周围的施主、受主能级等，更进一步地，取决于整个金刚石体系的费米能级（Fermi Level，$E_F$）\cite{doherty2013nitrogen}。在金刚石中，NV Center的电荷态可以通过光学方法进行调控，比如通过激光光子的吸收和发射，可以使NV Center的电荷态在NV$^0$和NV$^-$之间进行转换\cite{doi2016pure,siyushev2013optically,shields2015efficient}。通常情况下，NV Center可能并不会处于某种特定单一的状态，而是在两个电荷态之间不断地切换。在NV Center的电荷态切换的过程中，其电子自旋态也会发生变化，这种变化可以通过光学方法进行探测和读出，从而可以对NV Center的电荷态进行探测，这也是本文主要聚焦的问题。
 
-对于NV Center的两种电荷态NV$^0$和NV$^-$而言，我们最主要的区分方式就是其光谱特征的不同，两种电荷态在零声子线处（zero phonon line, ZPL）都有较为强烈的光学跃迁现象。零声子线是指在光谱中的一种特殊峰值或能级跃迁，其特点是在跃迁过程中不伴随着声子（晶格振动）的吸收或发射，此状态下的能级跃迁是非常干净和锐利的，不受热振动的影响，通常情况下接近绝对零度的时候，声子的振动作用极其微弱，晶体的大部分光学跃迁都接近于ZPL的波长。零声子线通常表示了一个非常纯净的能级跃迁，因为它不受晶格振动引起的能级展宽的影响。如图1.7所示，NV$^-$的零声子线位于637 nm处，而NV$^0$的零声子线位于575 nm处。在室温条件下，由于声子振动不可避免的影响，零声子线总会伴随着较强的声子边带（phonon sidebands）效应，导致NV Center的光谱出现展宽现象，而不是在ZPL处出现极其尖锐突出的峰值。
+对于NV Center的两种电荷态NV$^0$和NV$^-$而言，我们最主要的区分方式就是其光谱特征的不同，两种电荷态在零声子线处（zero phonon line, ZPL）都有较为强烈的光学跃迁现象。零声子线是指在光谱中的一种特殊峰值或能级跃迁，其特点是在跃迁过程中不伴随着声子（晶格振动）的吸收或发射，此状态下的能级跃迁是非常干净和锐利的，不受热振动的影响，通常情况下接近绝对零度的时候，声子的振动作用极其微弱，晶体的大部分光学跃迁都接近于ZPL的波长。零声子线通常表示了一个非常纯净的能级跃迁，因为它不受晶格振动引起的能级展宽的影响。如图 \ref{fig: NV Spectrum}所示，NV$^-$的零声子线位于637 nm处，而NV$^0$的零声子线位于575 nm处。在室温条件下，由于声子振动不可避免的影响，零声子线总会伴随着较强的声子边带（phonon sidebands, PSB）效应，导致NV Center的光谱出现展宽现象，而不是在ZPL处出现极其尖锐突出的峰值。
 
 \begin{figure}
   \centering
   \includegraphics[width=1.0\textwidth]{figures/Chapter 1/NV Spectrum.png}
-  \caption[NV Center在不同电荷态的时候的光谱图象]{NV Center在不同电荷态的时候的光谱图象，其中红色的线为NV$^-$的光谱，蓝色的线为NV$^0$的光谱，NV$^-$的零声子线位于637 nm处，NV$^0$的零声子线位于575 nm处。}
+  \caption[NV Center在不同电荷态的时候的光谱图象]{NV Center在不同电荷态的时候的光谱图象，其中红色的线为NV$^-$的光谱，蓝色的线为NV$^0$的光谱，NV$^-$的零声子线位于637 nm处，NV$^0$的零声子线位于575 nm处\cite{karaveli2016modulation}。}
   \label{fig: NV Spectrum}
 \end{figure}
 
-\section{电子能级结构}
+\subsection{NV Center的电子能级结构}
 
-\subsection{NV$^-$的电子能级结构}
-对于我们最为关注的NV$^-$而言，其电子的能级结构可以用几个简单的三能级系统模型来描述，这个模型包括基态（ground state, GS）三重态（triplet）$^3A_2$（如图1.8a）、激发态（excited state, ES）三重态$^3E$（如图1.8b）和中间自旋单态（singlet state）。NV Center的负电荷状态NV$^-$是中性的NV$^0$捕获了一个电子形成的一个六电子缺陷能级结构，电子自旋量子数$S=1$的体系，这个结构可以通过各种方式在理论上进行模拟和验证，包括密度泛函理论、群论等方法\cite{lenef1996electronic,goss1997comment, maze2011properties, hossain2008ab, gali2009theory}。其中群论是一个非常强大且实用的工具，A. lenef和S. C. Rand在1996年的时候就通过群论预测了NV Center中的电子能级结构，其中较低的两个能级（$a_1(1), a_2(2)$)有$a_1$对称性，较高的两个能级（$e_x, e_y$）则在能量上退化兼并到关于$e$对称\cite{lenef1996electronic}。这些结论在后来人们拥有了超级计算机进行大规模密度泛函理论从头算（ab initio）的模拟的各项研究中被反复广泛的验证其可靠性和准确性\cite{gali2009theory, zou2023influence}。
+\subsubsection{NV$^-$的电子能级结构}
+对于我们最为关注的NV$^-$而言，其电子的能级结构可以用几个简单的三能级系统模型来描述，这个模型包括基态（ground state, GS）三重态（triplet）$^3A_2$（如图 \ref{fig: Electronic Structure}a）、激发态（excited state, ES）三重态$^3E$（如图 \ref{fig: Electronic Structure}b）和中间自旋单态（singlet state）。NV Center的负电荷状态NV$^-$是中性的NV$^0$捕获了一个电子形成的一个六电子缺陷能级结构，电子自旋量子数$S=1$的体系，这个结构可以通过各种方式在理论上进行模拟和验证，包括密度泛函理论、群论等方法\cite{lenef1996electronic,goss1997comment, maze2011properties, hossain2008ab, gali2009theory}。其中群论是一个非常强大且实用的工具，A. lenef和S. C. Rand在1996年的时候就通过群论预测了NV Center中的电子能级结构，其中较低的两个能级（$a_1(1), a_2(2)$)有$a_1$对称性，较高的两个能级（$e_x, e_y$）则在能量上退化兼并到关于$e$对称\cite{lenef1996electronic}。这些结论在后来人们拥有了超级计算机进行大规模密度泛函理论从头算（ab initio）的模拟的各项研究中被反复广泛的验证其可靠性和准确性\cite{gali2009theory, zou2023influence}。
 
 在GS和ES的时候，三重态能级会发生零场劈裂（zero field splitting, ZFS）的现象，出现两个可以分辨的自旋能级$m_s=0$和$m_s=±1$，其中$m_s$为电子磁量子数。在GS的时候，其GS-ZFS的劈裂宽度大约为2870 \unit{\MHz}，这使得其基态的自旋状态可以被微波（microwave, MW）所调控；而在ES的时候，其ES-ZFS约为GS-ZFS的一半，大概为1420 \unit{\MHz} \cite{gruber1997scanning,neumann2009excited}。
 
-对于NV$^-$而言，缺陷能级中一共有六个价电子，在$^3A_2$基态的时候，$a_1(1), a_2(2)$能级都是被电子完全占据的，剩下的两个电子分别占据了$e_x, e_y$这两个能量较高的能级，便构成了$S=1$的自旋三重态。在$^3A_2$和$^3E$能级之间，电子可以发生较为明显的ZPL偶极跃迁，其在室温条件下，$a_2(2)$能级中自旋向下的电子吸收532 nm的绿光光子跃迁到被激发到$e_x$能级，然后退激发释放637 nm （1.945 \unit{\eV}）的红光光子从而回到$^3A_2$基态，如图1.8c所示。值得注意的是，在室温条件下，电子从$^3E$能级退激发到基态的过程中，有一部分情况会不可避免的和晶体声子产生相互作用，通过系统间交叉(intersystem crossing, ISC)，从自旋单态的声子边带退激发到$^3A_2$，这个过程中不会辐射出可见光，如图1.8c所示。
+对于NV$^-$而言，缺陷能级中一共有六个价电子，在$^3A_2$基态的时候，$a_1(1), a_2(2)$能级都是被电子完全占据的，剩下的两个电子分别占据了$e_x, e_y$这两个能量较高的能级，便构成了$S=1$的自旋三重态。在$^3A_2$和$^3E$能级之间，电子可以发生较为明显的ZPL偶极跃迁，其在室温条件下，$a_2(2)$能级中自旋向下的电子吸收532 nm的绿光光子跃迁到被激发到$e_x$能级，然后退激发释放637 nm （1.945 \unit{\eV}）的红光光子从而回到$^3A_2$基态，如图 \ref{fig: Electronic Structure}c所示。值得注意的是，在室温条件下，电子从$^3E$能级退激发到基态的过程中，有一部分情况会不可避免的和晶体声子产生相互作用，通过系统间交叉(intersystem crossing, ISC)，从自旋单态的声子边带退激发到$^3A_2$，这个过程中不会辐射出可见光，如图 \ref{fig: Electronic Structure}c所示。
 
 \begin{figure}
   \centering
   \includegraphics[width=1.0\textwidth]{figures/Chapter 1/Electronic Structure.png}
-  \caption[NV$^-$的电子能级结构示意图]{NV$^-$的电子能级结构示意图，展示了带隙中间的缺陷能级：（a）$^3A_2$基态；（b）$^3E$激发态；（c）自旋三重态和ZPL跃迁过程，以及在自旋单态下的声子边带的ISC作用。}
-  \label{fig: NV Spectrum}
+  \caption[NV$^-$的电子能级结构示意图]{NV$^-$的电子能级结构示意图，展示了带隙中间的缺陷能级：（a）$^3A_2$基态；（b）$^3E$激发态；（c）自旋三重态和ZPL跃迁过程，以及在自旋单态下的声子边带的ISC作用\cite{staudacher2015nuclear}。}
+  \label{fig: Electronic Structure}
 \end{figure}
 
-需要注意的一点是，图1.8中所展示的NV Center的电子能级结构仅仅是一个简单的示意图，更加详细的细节，比如自旋单态ISC过程的能级结构、电子和氮核自旋之间超精细相互作用（hyperfine interaction）在这里并没有详细的给出，这些内容会在后续的章节中有所涉及。
+需要注意的一点是，图 \ref{fig: Electronic Structure}中所展示的NV Center的电子能级结构仅仅是一个简单的示意图，更加详细的细节，比如自旋单态ISC过程的能级结构、电子和氮核自旋之间超精细相互作用（hyperfine interaction）在这里并没有详细的给出，这些内容会在后续的章节中有所涉及。
 
-由于金刚石的德拜温度（Debye temperature）较高，所以声子态密度在环境室温的情况下较小，因此NV Center有着较低的电子-声子耦合性，从而有着较长的$T_1$弛豫时间\cite{koizumi2008physics}。较长的$T_1$时间与金刚石中较弱的自旋-轨道作用密切相关，其使得NV自旋态之间产生微小的混合状态，这些自旋态又与电子-声子相互作用发生耦合，从而使得NV自旋态发生弛豫。
+因为金刚石中电子的自旋-翻转作用需要通过金刚石晶体中的声子的释放来进行能量交换，所以NV自旋态之间的弛豫时间$T_1$与声子态密度有关。由于金刚石的德拜温度（Debye temperature）较高，所以声子态密度在环境室温的情况下较小，因此NV Center有着较低的电子-声子耦合性，从而有着较长的$T_1$弛豫时间\cite{koizumi2008physics}。较长的$T_1$时间与金刚石中较弱的自旋-轨道作用密切相关，其使得NV自旋态之间产生微小的混合状态，这些自旋态又与电子-声子相互作用发生耦合，从而使得NV自旋态发生弛豫。另外，因为金刚石较宽的带隙，所以NV Center存在于带隙中的缺陷能级受到外界环境的干扰较小，因此有着较高的稳定性。金刚石的这些独特的性质使得其在室温条件下，对于缺陷能级的跃迁效应不会有额外的影响，让NV Center的量子效应在室温情况下仍然可以被观测到并可以被用于量子信息、量子精密测量等领域，这一点相比于其他的量子体系，比如超导量子比特（superconducting qubit）、离子阱（trapped ions）等体系，有着非常大的优势\cite{hu2023progress, acosta2013nitrogen}。
 
+\subsubsection{NV$^0$的电子能级结构}
+对于NV$^0$而言，其电子能级结构和NV$^-$有所不同，如图 \ref{fig: NV0 Electronic Structure}所示。相对于有两个额外的未成对电子组成电子自旋量子数$S=1$的NV$^-$，NV$^0$的外部仅有一个额外的未成对电子，在光学激发的情况下，NV$^0$的能级结构可能是自旋量子数为$S=\frac{1}{2}$的自旋二重态（spin doublet）或$S=\frac{3}{2}$的自旋四重态（spin quadruplet state）。由于电子顺磁共振（electron paramagnetic resonance, EPR）实验过程中的干扰，Jahn-Teller畸变的效应对于NV$^0$的自旋二重态的影响较大，因此中性电荷态的NV Center并不适合各种各样基于电子自旋相关的测量，所以绝大部分的研究都是基于NV$^-$的电子自旋态进行的\cite{gali2009theoryoftheneutral}。然而，NV$^0$的电子能级结构对于NV$^-$的电子能级结构的理解和研究仍然有着重要的意义，比如在NV$^-$的电子自旋态和氮核自旋态之间的超精细相互作用的研究中，NV$^0$的电子能级结构可以作为NV$^-$的电子能级结构的参考，从而可以更好地理解NV$^-$的电子能级结构\cite{gali2009theoryoftheneutral}。
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/Chapter 1/NV0 Electronic Structure.jpg}
+  \caption[NV$^-$和NV$^0$的电子能级结构对比]{NV$^-$和NV$^0$的电子能级结构对比，a图和b图分别展示了NV$^-$和NV$^0$的基态、激发态、声子边带的能级结构。图中分别NV$^-$和NV$^0$的ZPL能量，分别为1.945 eV（637 nm）和2.156 ev（575 nm），其中对于NV$^-$而言，声子边带的基态和激发态之间的能量差为1.190 eV（1041 nm）\cite{doherty2013nitrogen}。}
+  \label{fig: NV0 Electronic Structure}
+\end{figure}
+
+本文的工作和研究主要依靠NV$^-$的基态和激发态自旋三重态，以及NV$^0$的基态和激发态的自旋双重太，包括他们的能级跃迁过程，因为这些决定了我们可以观测到的荧光效应，并由此来表征NV Center的各种性质。除此之外，这些荧光效应是光子激发电离过程的基础，因为它们在双光子激发自旋三重态和双重态的过程中，使得金刚石导带和价带的电子产生交换关联的效应，从而让荧光现象有着可观测的规律来让人们进行研究和应用\cite{aslam2013photo}。需要提到的一点是，对于ISC过程而言，也就是NV$^0$的自旋四重态和NV$^-$的自旋单态，在本文所研究的电荷态动力学这一关注点之下是可以忽略的，因为在目前的科学研究之中，这些状态时不参与NV Center的光致发光和光子激发电离的过程的。
 
 \section{各节一级标题}
 我是内容
