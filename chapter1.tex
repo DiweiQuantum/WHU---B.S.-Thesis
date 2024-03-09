@@ -110,7 +110,7 @@ NV Center是金刚石中最常见的色心之一，其结构如图 \ref{fig: NV 
   \label{fig: NV Symmetry}
 \end{figure}
 
-近十几年来，随着半导体的工艺进步和计算机的广泛运用，人们开发了许多强有力的科学计算工具，通过基于密度泛函理论（Density Functional Theory, DFT）第一性原理（First-principles），利用杂化泛函Heyd-Scuseria-Ernzerhof (HSE06)算法可以较为准确地得到NV Center的自旋密度（Spin Density）和带隙中各能级的电荷密度（Charge Density），如图 \ref{fig: Spin and Charge Density}所示，可以看到NV$^-$的自旋密度和带隙中各个缺陷能级的电荷密度都是围绕$C_{3v}$旋转对称\cite{zou2023influence}。
+近十几年来，随着半导体的工艺进步和计算机的广泛运用，人们开发了许多强有力的科学计算工具，通过基于密度泛函理论（Density Functional Theory, DFT）第一性原理（First-principles），利用HSE杂化泛函Heyd-Scuseria-Ernzerhof (HSE06)算法可以较为准确地得到NV Center的自旋密度（Spin Density）和带隙中各能级的电荷密度（Charge Density），如图 \ref{fig: Spin and Charge Density}所示，可以看到NV$^-$的自旋密度和带隙中各个缺陷能级的电荷密度都是围绕$C_{3v}$旋转对称\cite{zou2023influence}。
 
 \begin{figure}
   \centering
@@ -137,12 +137,12 @@ NV Center是金刚石中最常见的色心之一，其结构如图 \ref{fig: NV 
 
 在GS和ES的时候，三重态能级会发生零场劈裂（zero field splitting, ZFS）的现象，出现两个可以分辨的自旋能级$m_s=0$和$m_s=±1$，其中$m_s$为电子磁量子数。在GS的时候，其GS-ZFS的劈裂宽度大约为2870 \unit{\MHz}，这使得其基态的自旋状态可以被微波（microwave, MW）所调控；而在ES的时候，其ES-ZFS约为GS-ZFS的一半，大概为1420 \unit{\MHz} \cite{gruber1997scanning,neumann2009excited}。
 
-对于NV$^-$而言，缺陷能级中一共有六个价电子，在$^3A_2$基态的时候，$a_1(1), a_2(2)$能级都是被电子完全占据的，剩下的两个电子分别占据了$e_x, e_y$这两个能量较高的能级，便构成了$S=1$的自旋三重态。在$^3A_2$和$^3E$能级之间，电子可以发生较为明显的ZPL偶极跃迁，其在室温条件下，$a_2(2)$能级中自旋向下的电子吸收532 nm的绿光光子跃迁到被激发到$e_x$能级，然后退激发释放637 nm （1.945 \unit{\eV}）的红光光子从而回到$^3A_2$基态，如图 \ref{fig: Electronic Structure}c所示。值得注意的是，在室温条件下，电子从$^3E$能级退激发到基态的过程中，有一部分情况会不可避免的和晶体声子产生相互作用，通过系统间交叉(intersystem crossing, ISC)，从自旋单态的声子边带退激发到$^3A_2$，这个过程中不会辐射出可见光，如图 \ref{fig: Electronic Structure}c所示。
+对于NV$^-$而言，缺陷能级中一共有六个价电子，在$^3A_2$基态的时候，$a_1(1), a_2(2)$能级都是被电子完全占据的，剩下的两个电子分别占据了$e_x, e_y$这两个能量较高的能级，便构成了$S=1$的自旋三重态。在$^3A_2$和$^3E$能级之间，电子可以发生较为明显的ZPL偶极跃迁，其在室温条件下，$a_2(2)$能级中自旋向下的电子吸收532 nm的绿光光子跃迁到被激发到$e_x$能级，然后退激发释放637 nm （1.945 \unit{\eV}）的红光光子从而回到$^3A_2$基态，如图 \ref{fig: Electronic Structure}c所示。值得注意的是，在室温条件下，电子从$^3E$能级退激发到基态的过程中，有一部分情况会不可避免的和晶体声子产生相互作用，通过系统间交叉(intersystem crossing, ISC)，从自旋单态的退激发到$^3A_2$，这个过程中不会辐射出可见光，如图 \ref{fig: Electronic Structure}c所示。
 
 \begin{figure}
   \centering
   \includegraphics[width=1.0\textwidth]{figures/Chapter 1/Electronic Structure.png}
-  \caption[NV$^-$的电子能级结构示意图]{NV$^-$的电子能级结构示意图，展示了带隙中间的缺陷能级：（a）$^3A_2$基态；（b）$^3E$激发态；（c）自旋三重态和ZPL跃迁过程，以及在自旋单态下的声子边带的ISC作用\cite{staudacher2015nuclear}。}
+  \caption[NV$^-$的电子能级结构示意图]{NV$^-$的电子能级结构示意图，展示了带隙中间的缺陷能级：（a）$^3A_2$基态；（b）$^3E$激发态；（c）自旋三重态和ZPL跃迁过程，以及在自旋单态下的ISC作用\cite{staudacher2015nuclear}。}
   \label{fig: Electronic Structure}
 \end{figure}
 
@@ -156,40 +156,99 @@ NV Center是金刚石中最常见的色心之一，其结构如图 \ref{fig: NV 
 \begin{figure}
   \centering
   \includegraphics[width=0.9\textwidth]{figures/Chapter 1/NV0 Electronic Structure.jpg}
-  \caption[NV$^-$和NV$^0$的电子能级结构对比]{NV$^-$和NV$^0$的电子能级结构对比，a图和b图分别展示了NV$^-$和NV$^0$的基态、激发态、声子边带的能级结构。图中分别NV$^-$和NV$^0$的ZPL能量，分别为1.945 eV（637 nm）和2.156 ev（575 nm），其中对于NV$^-$而言，声子边带的基态和激发态之间的能量差为1.190 eV（1041 nm）\cite{doherty2013nitrogen}。}
+  \caption[NV$^-$和NV$^0$的电子能级结构对比]{NV$^-$和NV$^0$的电子能级结构对比，a图和b图分别展示了NV$^-$和NV$^0$的基态、激发态、自旋单态的能级结构。图中分别NV$^-$和NV$^0$的ZPL能量，分别为1.945 eV（637 nm）和2.156 ev（575 nm），其中对于NV$^-$而言，自旋单态ISC过程的基态和激发态之间的能量差为1.190 eV（1041 nm）\cite{doherty2013nitrogen}。}
   \label{fig: NV0 Electronic Structure}
 \end{figure}
 
-本文的工作和研究主要依靠NV$^-$的基态和激发态自旋三重态，以及NV$^0$的基态和激发态的自旋双重太，包括他们的能级跃迁过程，因为这些决定了我们可以观测到的荧光效应，并由此来表征NV Center的各种性质。除此之外，这些荧光效应是光子激发电离过程的基础，因为它们在双光子激发自旋三重态和双重态的过程中，使得金刚石导带和价带的电子产生交换关联的效应，从而让荧光现象有着可观测的规律来让人们进行研究和应用\cite{aslam2013photo}。需要提到的一点是，对于ISC过程而言，也就是NV$^0$的自旋四重态和NV$^-$的自旋单态，在本文所研究的电荷态动力学这一关注点之下是可以忽略的，因为在目前的科学研究之中，这些状态时不参与NV Center的光致发光和光子激发电离的过程的。
+本文的工作和研究主要依靠NV$^-$的基态和激发态自旋三重态，以及NV$^0$的基态和激发态的自旋双重态，包括他们的能级跃迁过程，因为这些决定了我们可以观测到的荧光效应，并由此来表征NV Center的各种性质。除此之外，这些荧光效应是光子激发电离过程的基础，因为它们在双光子激发自旋三重态和双重态的过程中，使得金刚石导带和价带的电子产生交换关联的效应，从而让荧光现象有着可观测的规律来让人们进行研究和应用\cite{aslam2013photo}。需要提到的一点是，对于ISC过程而言，也就是NV$^0$的自旋四重态和NV$^-$的自旋单态，在本文所研究的电荷态动力学这一关注点之下是可以忽略的，因为在目前的科学研究之中，这些状态时不参与NV Center的光致发光和光子激发电离的过程的。
 
-\section{各节一级标题}
-我是内容
+\subsection{NV Center的光学和自旋性质}
+对于单个NV Center而言，其光致发光的特性可以通过激光光子的吸收和发射来进行调控，在室温条件下作为一个在可见光波段的稳定的单光子发射源，这一点在量子信息和量子通信领域有着广泛的应用。NV Center的能级结构的一个重要的特征是其可以进行光学极化（optical polarization），也就是控制电子在不同的特定能级的分布率，如图 \ref{fig: Optical Properties}所示。
 
-\subsection{各节二级标题}
-你是内容
+\begin{figure}
+  \centering
+  \includegraphics[width=1.0\textwidth]{figures/Chapter 1/Optical Properties.png}
+  \caption[NV Center的电子能级结构和光学激发性质]{NV Center的电子能级结构和光学激发性质。（a）NV$^-$的基态具有沿着轨道A$_2$对称的自旋三重态，在光学跃迁激发的过程中，有一定概率会从自旋单态的亚稳态从激发态回到基态；（b）零外场的情况下，自旋-自旋（spin-spin）和自旋-轨道（spin-orbit）各自之间的相互作用使得基态和激发态出现了精细结构（fine structure）；（c）（d）激发态和基态中简并的能级在外磁场的作用下发生劈裂。}
+  \label{fig: Optical Properties}
+\end{figure}
 
-\subsubsection{各节三级标题}
-他是内容
+图（a）中，基态的电子可以通过非共振激发（光子的波长小于637 nm的ZPL波长）或者共振激发（光子的波长为637 nm的ZPL波长）被激发到激发态的三重态上，激发态的自旋三重态由于轨道双重态的作用，使得激发态存在六个能级。在室温下，通常利用532 nm的绿色激光将电子从基态激发到激发态六个能级的其中一个，这个过程是通过声子边带（phonon-sideband, PSB）非共振激发。由于自旋守恒跃迁（spin-conserving transitions）的效应，基态$m_s=\pm 1$能级的电子会被激发到激发态的$m_s=\pm 1$能级，这些电子会倾向于产生Intersystem Crossing（ISC）现象，由$^1A_1$和$^1E$的自旋单态亚稳态能级回到$m_s=0$的基态，这个过程不会发射可见光，单光子计数器的计数率会下降，这也是利用532 nm的激光对NV Center自旋状态进行读出和初始化的原理。图（b）中，零场状态下，基态的三重态分裂成$m_s = 0$能级和两个简并的能量相同的$m_s=\pm 1$能级，它们之间的能量差是2.88 GHz，因此可以利用微波进行对NV Center的自旋态进行调控。图（c）和（d）中，NV的$C_{3v}$轴向外磁场的作用下，基态和激发态的能级都会发生劈裂，这个劈裂的宽度和沿轴向的外磁场强度成正比，这也是利用NV Center进行磁场测量的原理。如果外磁场方向不呈NV的$C_{3v}$轴向，那么基态NV Center的自旋态会出现基态能级反交叉（ground-state level anticrossing）效应，使得荧光计数率的下降，在实验上通常利用这个效应来判断该亮点是否为NV Center。
 
-\paragraph{四级标题}
-内容内容
+就ISC效应而言，需要补充说明的一点是，在激发的时候，基态自旋状态为$m_s = 0$的电子会被激发到激发态的$m_s = 0$状态，这个时候不会趋向于产生ISC效应经过自旋单态，电子会从激发态的自旋三重态直接退激发回到基态的自旋三重态，在这个过程中会发射红光光子。总而言之，NV Center基态的自旋三重态可以被532 nm的绿色激光极化，并通过退激发所发出的红光进行读出。对于NV Center基态的自旋状态而言，我们可以通过特定频率的微波进行调控，也就是单电子自旋共振（Electron Spin Resonance, ESR）技术。
 
-\subparagraph{五级标题}
-内容内容
+\section{NV Center电子自旋的调控}
 
-\section{字体样式}
-宋体\quad \textbf{粗体}\quad \textit{斜体}\quad \textbf{\textit{粗斜体}}。
+NV Center电子自旋的调控方式ESR的原理类似于核磁共振（Nuclear Magnetic Resonance, NMR），即只是将关注的实验对象从原子核换成了电子，所以绝大部分理论和方法都是共通的。其中，区别最大的地方就是电子自旋的旋磁比（gyromagnetic ratio）为$\gamma_e=2.8$ MHz/G，比核自旋旋磁比大三个数量级，所以电子自旋更容易收到外界环境的影响，比如外界的磁噪音，从而发生退相干，丢失其携带的量子信息。当然，当NV Center作为传感用途的时候，其电子自旋态对于环境的敏感性也使得它成为一种灵敏度极高的量子精密测量器件。
 
-{\heiti 黑体\quad \textbf{粗体}\quad \textit{斜体}\quad \textbf{\textit{粗斜体}}}。
+\subsection{NV Center的哈密顿量}
 
-{\fangsong 仿宋\quad \textbf{粗体}\quad \textit{斜体}\quad \textbf{\textit{粗斜体}}}。
+正如前文所提到的，在NV Center处于基态的时候，其电子自旋并没有非常明显的自旋轨道耦合效应（spin-orbit coupling），因此其自旋动力学基本上是由其零场劈裂（zero-field splitting, ZFS）、电子Zeeman项、电子自旋和氮核自旋的超精细相互（hyperfine interaction）作用等因素所影响的，其哈密顿可以写成这样的形式：
+\begin{equation}
+  \mathcal{H}_{NV} = \mathcal{H}_{ZFS}+\mathcal{H}_{eZ}+\mathcal{H}_{hf}
+  \label{equ: NV Hamiltonian}
+\end{equation}
+其中，$\mathcal{H}_{ZFS}$为ZFS项的哈密顿量，$\mathcal{H}_{eZ}=-\mu_eB$为电子Zeeman项在外磁场$B$作用下的哈密顿量，$\mathcal{H}_{hf}$是电子自旋和氮核自旋相互作用的超精细作用项的哈密顿量。
 
-{\kaishu 楷书\quad \textbf{粗体}\quad \textit{斜体}\quad \textbf{\textit{粗斜体}}}。
+\subsection{光探测磁共振}
 
-Serif\quad \textit{Italic}\quad \textbf{Bold}\quad \textbf{\textit{BoldItalic}}
+光探测磁共振（Optically Detected Magnetic Resonance, ODMR）技术是指原子、分子的光学频率的共振与射频或微波频率的磁共振同时发生的双共振现象。对于NV Center而言，就是利用微波使其电子自旋在ZFS劈裂的能级之间进行调控，然后通过读取光子数据在不同微波频率处的对比度来确定共振谱的技术。在实验中，ODMR又分为连续ODMR（Continuous Wave-ODMR，CW-ODMR）和脉冲ODMR（Pulsed ODMR）两种形式，下面进行分别介绍。
 
-{\sffamily Sans\quad \textit{Italic}\quad \textbf{Bold}\quad \textbf{\textit{BoldItalic}}}
+\subsubsection{CW-ODMR}
 
-{\ttfamily Mono\quad \textit{Italic}\quad \textbf{Bold}\quad \textbf{\textit{BoldItalic}}}
+CW-ODMR是最为基础的序列测量，其基本原理是在持续激发和读出的过程中，施加连续的微波信号，测试不同频率的微波信号激发的情况下，计数率的变化，从而得到NV Center在基态的三重态之间的能量差异所导致的共振频率，测量序列如图\ref{fig: CW-ODMR_seq}所示。
+\begin{figure}
+  \centering
+  \includegraphics[width=1.0\textwidth]{figures/Chapter 1/CW-ODMR_seq.png}
+  \caption[CW-ODMR的测量序列]{CW-ODMR的测量序列，532 nm的激光、微波和单光子计数器读出从始至终一直保持开启的持续状态。}
+  \label{fig: CW-ODMR_seq}
+\end{figure}
+具体来说，在持续的532 nm激光的激发下，NV Center会处一个比较亮的状态，单光子计数器的读数较高，这是因为532 nm激光的激发会使得电子的自旋被持续性的初始化到$m_s=0$的态上，而$m_s=0$的态在被激发的后，退激发的时候不会发生ISC效应，从而会发射红光光子。当受到能量和$m_s=\pm1$与$m_s=0$之间能量差值相同的微波的时候，电子自旋会发生共振，也就是布居数分布从$m_s=0$被翻转到$m_s=\pm1$，这使得计数率下降。
+\begin{figure}
+  \centering
+  \includegraphics[width=1.0\textwidth]{figures/Chapter 1/CW-ODMR_results.png}
+  \caption[CW-ODMR的测量结果]{CW-ODMR的测量结果，(a)零场状态下CW-ODMR的测量结果，dip的位置在2.87 GHz处，对比度约为25.4 \%，为$m_s=\pm1$的双重简并态；(b)外磁场沿NV轴向的情况下CW-ODMR的测量结果，两个dips的平均位置大约在2.87 GHz处，但是每个峰的对比度变小。}
+  \label{fig: CW-ODMR_results}
+\end{figure}
+如图 \ref{fig: CW-ODMR_results}(a)所示，展示了在零外场状态下的CW-ODMR的实验结果，可以看到微波频率为2.87 GHz处，出现一个对比度约为25.4 \%的dip，这是因为NV Center的自旋态发生了共振，$m_s=\pm1$态的电子被激发后，退激发的过程中不会发出650-800 nm区间的可见光，因此荧光效应在共振频率的时候会减弱。在图 \ref{fig: CW-ODMR_results}(b)中，展示了在外磁场沿着NV轴向的情况下的CW-ODMR的实验结果，可以看到在这种情况下，出现了两个dips，每个dip的对比度相较于零外场的情况下变小，这是因为外磁场的作用使得NV Center的$m_s=\pm1$态发生劈裂，从而在微波扫频的过程中出现了两个明显的dips，dips之间的距离和沿NV轴向的磁场强度成正比，这也是利用NV Center进行磁场测量的原理之一。
+
+\subsubsection{Pulsed ODMR}
+
+由于宽频的微波源的精度和稳定性有限，CW-ODMR的测量精度和分辨率都有所限制，因此在实验中通常会使用脉冲ODMR（Pulsed ODMR）技术，这种技术可以通过微波源提供一个基础频率，精细的频率调控通过任意波形发射器（Arbitrary Waveform Generator, AWG）脉冲序列的方式来进行NV Center的自旋态的调控，从而可以得到更高的测量精度和分辨率。脉冲ODMR的测量序列如图\ref{fig: Pulsed ODMR_seq}所示。
+
+\begin{figure}
+  \centering
+  \includegraphics[width=1.0\textwidth]{figures/Chapter 1/CW-ODMR_seq.png}
+  \caption[Pulsed ODMR的测量序列]{Pulsed ODMR的测量序列，532 nm的激光、微波和单光子计数器读出按照时间序列交替进行。}
+  \label{fig: Pulsed ODMR_seq}
+\end{figure}
+
+Pulsed ODMR测量序列中，先用532 nm的激光对NV Center进行初始化，将所有的电子自旋都初始化到$m_s=0$态；然后利用脉冲微波序列对电子的自旋状态进行调控，使得其翻转到指定的状态；最后通过532 nm的激光对自旋态进行读出，同时通过APD进行计数统计。在这里需要注意一点的是，我们需要选择测量区间和参考区间，通过对比两个区间的计数率，可以得到NV Center的自旋态的信息，如图 \ref{fig: mes_ref}所示。
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth]{figures/Chapter 1/mes_ref.png}
+  \caption[Pulsed ODMR的测量读出]{Pulsed ODMR的测量读出，NV Center处于$|0\rangle$态的时候，计数率较高；NV Center处于$|1\rangle$态的时候，计数率较低；最后所有的电子自旋状态都被初始化到$|0\rangle$态\cite{staudacher2015nuclear}。}
+  \label{fig: mes_ref}
+\end{figure}
+
+在NV Center经过Pulsed MW调控后第一次激发的时候，处于$|0\rangle$态的电子产生的荧光计数率较高，而处于$|1\rangle$态的电子产生的荧光计数率较低。对于NV Center的电子而言，每轮的激发和退激发的过程是需要一定的时间，这也就是测量窗口的时间长度，超过这个时间之后，所有的电子都会被初始化到$|0\rangle$态，荧光计数率恢复到较高的状态。我们需要通过测量窗口（mes）内荧光计数率的降低和完全初始化后荧光计数率（ref）进行对比，即可得出NV Center的自旋态的信息。通常这个序列会重复多次，从而降低测量的误差，得到更加准确的结果。如图 \ref{fig: Pulsed ODMR_results}(a)所示，可以看到$^{14}N$的超精细相互作用导致的三个dips，相邻的dips之间的距离大概是2 MHz。如图 \ref{fig: Pulsed ODMR_results}(b)，展示了该NV Center周围存在$^{13}C$的spin bath的情况下的Pulsed ODMR的测量结果，$^{13}C$ spin bath的存在会导致$^{14}N$的超精细相互作用的能级发生劈裂，产生六个能级，其中有两组重叠了两个能级的状态，最后测量得到四个dips，其中两个有能级重叠的dips较宽。
+
+\begin{figure}
+  \centering
+  \includegraphics[width=1.0\textwidth]{figures/Chapter 1/Pulsed ODMR_results.png}
+  \caption[Pulsed ODMR的测量结果]{Pulsed ODMR的测量结果，(a)零场状态下Pulsed ODMR的测量结果，周围不存在$^{13}C$的spin bath外场，出现了三个dips；(b)周围存在$^{13}C$的spin bath外场作用下的Pulsed ODMR的测量结果，出现了六个dips，其中有两组重叠了两个dips的较宽的dips，最后观测得到的就是4个dips。}
+  \label{fig: Pulsed ODMR_results}
+\end{figure}
+
+\subsection{NV Center电子自旋的拉比振荡}
+
+拉比振荡（Rabi oscillation）是量子力学中的一种现象，描述了一个处于两个能级之间的量子系统在外部激励下的振荡行为。这个现象是由Isidor Rabi在20世纪30年代首次提出并研究的，因此得名。拉比振荡通常发生在一个由两个能级组成的系统中，例如一个原子或者一个量子比特。这两个能级分别对应于系统的不同的量子态，在NV Center的电子自旋中，就是基态的$m_s=0$和$m_s = \pm1$的两个能级之间。在拉比振荡的过程中，系统会在这两个能级之间来回转换。拉比振荡的起因是外部激励，通常是通过一个恒定频率的电磁场（微波源）来实现。当外部电磁场与系统的共振频率匹配时，能级之间的跃迁会被促发，导致系统从一个能级跃迁到另一个能级。然而，由于量子干涉的效应，系统并不会一直保持在新的能级上，而是会在不同的能级之间进行振荡。这种振荡行为可以用数学上的波动方程来描述，通常采用薛定谔方程或者旋转波近似来处理。拉比振荡的频率由外部激励的强度和频率以及系统内部的能级差决定。在实验中，可以通过改变外部激励的参数来调控拉比振荡的频率和幅度。
+
+如图 \ref{fig: Rabi Oscillation}所示，可以看到在不同的施加时间下，NV Center的电子自旋在两个能级之间发生了振荡，对于NV Center的电子自旋而言，可以通过Pulsed ODMR测量来使电子在两个能级之间实现Rabi oscillation，在改变微波的施加时间的过程中，记录荧光计数率的变化可以得到NV Center的拉比振荡的频率和幅度，从而得到特定微波功率下电子自旋$\pi$-pulse的长度，也就是在Bloch Sphere之中，自旋矢量旋转$\pi$所需施加微波时间，用于精确地调控电子自旋。
+
+
+
+
+
 
 \end{document}
