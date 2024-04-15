@@ -306,13 +306,76 @@ Ramsey序列调控单NV电子自旋的主要的原理是，在利用连续的532
     f(t)=exp[-b^2t_c^2(\frac{t}{t_c}+e^{-\frac{t}{t_c}}-1)]
   \end{aligned}
 \end{equation}
-如果在准静态过程中，噪音的变化很慢（$t<<t_c$），在相干时间的尺度内基本不会发生变化，那么如图 \ref{fig: FID Functions}（a）所示，FID的衰减曲线呈高斯衰减的趋势，相干时间
-
+在准静态过程中，噪音的变化很慢（$t\ll t_c$），也就是说在相干时间的尺度内基本不会发生变化，那么如图 \ref{fig: FID Functions}（a）所示，FID的衰减曲线呈高斯衰减的趋势，相干时间为$T_2 = \sqrt{2/b^2}$，其中b定义为spin-bath相互作用强度，$t_c$量化了核自旋的翻转效率（flip-flop rates），也就代表着噪声相关时间。与之相反的，在考虑噪声变化较快的情况下（$t\gg t_c$），FID的衰减曲线呈指数衰减的趋势，如图 \ref{fig: FID Functions}（b）所示，这种情况下，相干时间为$T_2 = 1/b^2t_c$，也就是说在这种情况下，NV Center的电子自旋的相干时间主要受到spin-bath噪声的影响较大，退相干的速度较快。
 \begin{figure}
   \centering
   \includegraphics[width=1.0\textwidth]{figures/Chapter 1/FID Functions.png}
-  \caption[FID衰减曲线]{FID衰减曲线，两个图展示了不同情况下（a）Ramsey序列作用下，读出荧光计数率随着弛豫时间的变化，两条曲线为读出前翻转$\frac{\pi}{2}$和$\frac{3\pi}{2}$的测量结果；（b）将翻转$\frac{\pi}{2}$和$\frac{3\pi}{2}$的测量结果作差得到的结果。}
+  \caption[FID相干性衰减曲线]{FID相干性衰减曲线，两个图展示了不同情况下的计数率变化曲线，将翻转$\frac{\pi}{2}$和$\frac{3\pi}{2}$的测量结果作差得到的结果。（a）准静态过程中，噪音关联时间远大于相干时间尺度（$t\ll t_c$），噪音的作用强度较强（$b\gg 1/t_c$）；（b）噪音快速变化的环境下，噪音关联时间远小于相干时间的尺度（$t\gg t_c$），噪音的作用强度较弱（$b\ll 1/t_c$）。}
   \label{fig: FID Functions}
+\end{figure}
+
+\subsection{NV Center电子自旋的自旋-回波和动力学解耦序列}
+为了提高NV Center电子自旋的相干性，延长相干时间，提高读出和门操作的保真度，我们会运用动力学解耦序列（Dynamical Decoupling Sequence）来操控电子自旋实现特定的翻转。最常见的Dynamical Decoupling序列就是自旋-回波（Spin-echo）序列，也被成为Hahn-echo序列，由Erwin Hahn在1950年首次提出\cite{hahn1950spin}。其基本原理如图\ref{fig: Hahn Sequence}，在电子自旋自由演化一段时间后，产生了退相干的相位，然后施加一个$\pi$脉冲，对相位在时间尺度上进行反演操作，从而使得之前产生的相位被抵消，恢复自旋相干性，延长相干时间。
+\begin{figure}
+  \centering
+  \includegraphics[width=1.0\textwidth]{figures/Chapter 1/Hahn Sequence.png}
+  \caption[Hahn-echo 序列]{Hahn-echo 序列，（a）在Hahn-echo序列作用下，电子自旋矢量在布洛赫球中的变化；（b）Hahn-echo序列的微波示意图，在中间$\tau/2$的位置插入了一个$\pi$脉冲。\cite{新型扫描量子传感显微镜系统的研发与应用}}
+  \label{fig: Hahn Sequence}
+\end{figure}
+
+在应用自旋-回波序列之后，退相干函数中加入了一项滤波项：
+\begin{equation}
+  \xi_{echo}(t)=\left\{
+  \begin{array}{rcl}
+  +1 & & {t \in [0, \tau]}\\
+  -1 & & {t \in [\tau, 2\tau]}
+  \end{array} \right.
+  \end{equation}
+因此，退相干衰减函数的表达形式可以写为：
+\begin{equation}
+  f(t) = exp[-b^2t_c^2(\frac{t}{t_c}+4e^{-\frac{t}{2t_c}}-e^{-\frac{t}{t_c}}-3)]
+\end{equation}
+自旋-回波序列的前提使环境噪声是准静态变化的，也就是噪声变化的时间尺度要大于序列操控的时间$\tau$，自旋-回波序列才能对相干时间起到较好的提升作用。为了区分FID自由演化下的相干时间，经过Dynamical Decouping序列处理后的相干时间定义为$T_2^*$。如图 \ref{fig: Hahn Functions}（a）中的曲线所示，在准静态过程中，噪音关联时间远大于相干时间尺度（$t\ll t_c$），其衰减函数可以简化为$f(t) = exp(-\frac{b^2t^3}{12t_c})$，因此相干时间$T_2^*=\sqrt[3]{\frac{12t_c}{b^2}}$，其相干时间明显长于同等情况下的$T_2$。然而对于快速变化的噪声环境，如图 \ref{fig: Hahn Functions}（b）中的曲线所示，噪音关联时间远小于相干时间的尺度（$t\gg t_c$），其衰减函数可以简化为$f(t) = exp(-b^2t_ct)$，因此相干时间$T_2^*=(b^2t_c)^{-1}\ \textasciitilde \ T_2$，其相干时间和同等情况下的$T_2$相近，也是就自旋回波序列无法让相干时间实现较为明显的提升。
+\begin{figure}
+  \centering
+  \includegraphics[width=1.0\textwidth]{figures/Chapter 1/Hahn Functions.png}
+  \caption[Hahn-echo 序列作用下的相干性衰减曲线]{Hahn-echo 序列作用下的相干性衰减曲线，两个图展示了不同情况下的计数率变化曲线，将翻转$\frac{\pi}{2}$和$\frac{3\pi}{2}$的测量结果作差得到的结果。（a）准静态过程中，噪音关联时间远大于相干时间尺度（$t\ll t_c$），噪音的作用强度较强（$b\gg 1/t_c$）；（b）噪音快速变化的环境下，噪音关联时间远小于相干时间的尺度（$t\gg t_c$），噪音的作用强度较弱（$b\ll 1/t_c$）。}
+  \label{fig: Hahn Functions}
+\end{figure}
+除此之外，我们还可以通过其他的Dynamical Decoupling序列来提高NV Center电子自旋的相干时间，比如Carr-Purcell-Meiboom-Gill（CPMG）序列、Uhrig Dynamical Decoupling（UDD）序列、XY8序列等等，这些序列的原理和应用类似于Hahn-echo，本质上是不断地快速重复Hahn-echo序列，使其在间隔的退相干尺度$\tau$时间减小，尽可能地小于噪音环境的变化尺度，可以尽量接近准静态噪声的过程，从而提高NV Center电子自旋的相干时间。在这些重复序列中，退相干函数可以粗略地写成$f(t)=exp[-\frac{1}{N^2}(\frac{t}{T_2})^3]$，相干时间和$N^{2/3}$成正相关的关系，也就是说通过增加序列的重复次数，可以提高NV Center电子自旋的相干时间。如图 \ref{fig: XY8 Sequence}所示，可以看到XY8序列重复次数N越大，其保持高信号强度的时间越长，相干时间也就越长。除此之外，XY8序列通过交替施加$\pi_x$和$\pi_y$，修正了微波脉冲的在$S_x$和$S_y$方向可能存在的轻微失相，进一步地延长了相干时间。但是$\pi$ pulse重复次数N不可能无限制的增大，因为在间隔时间$\tau$逐渐减小的时候，$\pi$ pulse的持续时间相对于间隔的演化时间$\tau$就不可忽略，所以其状态的保真度会降低，如图 \ref{fig: XY8 Sequence}（d）所示。同时，N的选取也要尽量避免其频率和周围核自旋的Lamor频率接近，使得核自旋被共振驱动，对spin bath产生额外的影响。QuTech的研究人员通过XY8序列将NV Center的电子自旋时间提高了近三个数量级\cite{abobeih2018one}。
+\begin{figure}
+  \centering
+  \includegraphics[width=1.0\textwidth]{figures/Chapter 1/XY8 Sequence.png}
+  \caption[XY8 序列作用下的相干性衰减曲线和相干时间]{XY8 序列作用下的相干性衰减曲线和相干时间。（a）XY8序列微波操控示意图；（b）不同的序列重复次数N的XY8序列下，观测到的信号强度随着时间的变化；（c）相干时间和序列重复次数N之间的关系；（d）演化时间和状态保真度之间的变化关系。\cite{abobeih2018one}}
+  \label{fig: XY8 Sequence}
+\end{figure}
+
+\section{共聚焦显微镜系统实验平台的设计与搭建}
+\subsection{共聚焦显微镜的基本原理}
+实验室中常见的光学显微镜是通过光源发出自然光（白光）投射到被测样品上，样品的反射或透射光被物镜聚焦到目镜上，通过目镜观察到被测样品的图像。这种显微镜的分辨率受到可见光的波长的限制，通常在0.2 $\mu m$左右。为了提高显微镜的分辨率，人们提出了共聚焦显微镜（Confocal Microscopy）的概念，通过在显微镜中加入共聚焦系统，可以使得显微镜的分辨率提高到0.1 $\mu m$以下。共聚焦显微镜的基本原理是通过激光光源发出的激光束照射到样品上，样品的受到激光的激发后，在退激发的过程中会产生荧光效应释放出光子，被物镜聚焦到探测器上，并将信息传回到电脑。共聚焦显微镜的分辨率受到激光波长和物镜规格的限制，通常能在0.1 $\mu m$以下。共聚焦显微镜的优点是可以观察到样品的表面形貌和内部结构，实现三维的成像，非接触式无损的高分辨率、高灵敏度、高对比度的观察。
+
+对于NV Center而言，由于基态能级结构的电子能被绿光激发，并在退激发的过程中发射声子边带的红光光子，所以共聚焦显微镜的原理可以用于对金刚石中的NV Center进行表征和检测，通过激光的聚焦和荧光的检测，可以实现对不同深度NV Center的三维定位和成像。一般来说，共聚焦显微镜有以下几个主要的部分：激光光源、激光束聚焦系统、样品台、物镜、探测器、数据采集系统等等。平台的构建也有多种方案，通过镜头的放置方式和扫描的运行方式来区分。
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/Chapter 1/Confocal Platform.png}
+  \caption[共聚焦显微镜平台]{共聚焦显微镜平台，样品放置于手动XYZ三轴位移台上进行粗调节和聚焦，显微物镜倒置放置于压电纳米XYZ三轴位移台上进行精细扫描和聚焦。微波利用同轴线缆传递到样品表面，磁体也通过三轴手动位移台调节与样品的相对位置。}
+  \label{fig: Confocal Platform}
+\end{figure}
+如图 \ref{fig: Confocal Platform}所示，我们采用的方案是镜头倒置，通过纳米压电位移台移动镜头对样品表面进行扫描的方案。压电位移台为XYZ三轴位移台，移动范围均为100 $\mu m$，精度和稳定性为10 nm的量级，可以实现亚微米级别的扫描和定位。如图 \ref{fig: Confocal Optimizer}所示，展示了Confocal显微镜的Optimize图像，左图为XY方向二维扫描的图像，用于确定NV Center在二维平面的位置；右图为Z方向扫描在不同深度的计数率，用于确定NV Center的深度。我们通过使用的德国Ulm University科研人员开发的基于Python的开源软件Qudi来对整套共聚焦系统进行控制，其中的Optimize功能能够在指定范围内自动寻找计数率高的位置来聚焦寻找NV Center，即图 \ref{fig: Confocal Optimizer}所示效果 \cite{binder2017qudi}。用于测试的样品的NV Center是通过在Element Six公司生产的电子级金刚石表面注入$^{14}$N离子形成的，所以NV Center的位置大部分在离表面5 $\mu m$内的浅层位置，使其发射的荧光光子能够尽可能多的被物镜所接收，提高实验数据和结果的对比度。
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth]{figures/Chapter 1/Confocal Optimizer.png}
+  \caption[Confocal显微镜的扫描和Auto Optimize功能]{Confocal显微镜的扫描和Auto Optimize功能。}
+  \label{fig: Confocal Optimizer}
+\end{figure}
+
+\subsection{共聚焦显微镜的搭建}
+如图\
+\begin{figure}
+  \centering
+  \includegraphics[width=1.0\textwidth]{figures/Chapter 1/Light Path.png}
+  \caption[共聚焦显微镜光路简图]{共聚焦显微镜光路简图。}
+  \label{fig: Confocal Optimizer}
 \end{figure}
 
 
