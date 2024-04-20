@@ -1,0 +1,47 @@
+%% An Introduction to LaTeX Thesis Template of Wuhan University
+%%
+%% Created by WHUTUG
+\documentclass[type=master,oneside,class=academic]{whu-thesis}
+\whusetup
+  {
+    info               =
+      {
+        title          = {武汉大学学位论文 \LaTeX{} 模板\\使用示例文档},
+        title*         = {An Introduction to LaTeX Thesis Template\\of Wuhan University},
+        student-number = {2021202010008},
+        school         = {院系名称},
+        author         = {张三三},
+        author*        = {Your Name},
+        subject        = {英语},
+        major          = {英国语言文学},
+        % advisor-name   = {教师姓名},
+        advisor        = {李某某, 教授},
+        advisor-outer  = {王某某, 高级工程师}, % 校外导师姓名、职称（用于专业学位论文）
+        direction      = {英语语言学},
+        % date           = {2021/5},
+        keywords       = {关键词 1 , 关键词 2 , 关键词 3 , 关键词 4 , 一个非常非常，非常非常长——的关键词 5},
+        keywords*      = {key word 1 , key word 2 , key word 3 , key word 4 , {and a very very, very very long key word---the key word 5}},
+      },
+    style              =
+      {
+        graphics-path  = {{figures/}{data/}},
+      },
+    element            =
+      {
+        innovation     = {pages/innovation},
+        abstract       = {pages/abstract},
+        abstract*      = {pages/enabstract},
+        bibliography   = {ref/refs , ref/thu},
+        achievements   = {pages/achievements},
+        thanks         = {pages/thanks},
+        appendix       = {pages/appendix}
+      }
+  }
+
+\begin{document}
+%%----------- 主体部分 ----------- %%
+\include{pages/chapter1}
+\include{pages/chapter2}
+\include{pages/chapter3}
+\include{pages/chapter4}
+\end{document}
